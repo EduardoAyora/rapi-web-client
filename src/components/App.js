@@ -1,12 +1,13 @@
-import Navbar from './Navbar'
 import {BrowserRouter as Router} from "react-router-dom";
 import Main from './Main'
+import {CategoriesProvider} from '../context/CategoriesContext'
 
 function App() {
   return (
     <Router basename={'/rapi-web'}>
-      <Navbar />
-      <Main />
+      <CategoriesProvider>
+        <Main />
+      </CategoriesProvider>
     </Router>
   );
 }

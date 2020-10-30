@@ -1,0 +1,47 @@
+.category-component {
+    padding: 0 0 3em 0;
+    color: #777A83;
+}
+
+.category-title {
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: -1px;
+    transform: scaleY(1.1);
+    /* line-height: 1.8; */
+}
+
+.category-title a {
+    text-decoration: none;
+    color: #3A3D49;
+}
+
+.category-component-list-container {
+    padding: 4em 2em 2em 2em;
+}
+
+.category-component-relative-ref {
+    position: relative;
+    overflow: hidden;
+    height: 60px;
+}
+
+.category-component .category-component-list {
+    position: absolute;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.category-component-list li {
+    display: inline-block;
+}
+
+.category-component button {
+    border: none;
+    padding: 1.5em;
+}
+
+.category-component button:focus {
+    outline: none;
+}

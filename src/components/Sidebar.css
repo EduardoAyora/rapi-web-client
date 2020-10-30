@@ -1,6 +1,18 @@
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
 .sidebar {
     background-color: #D1333C;
     width: 100vw;
+    max-width: 415px;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -35,7 +47,7 @@
 
 .sidebar nav  {
     padding: 10px 1.5em 20px 3.5em;
-    max-height: 80%;
+    max-height: 75%;
     overflow: auto;
 }
 
@@ -61,7 +73,14 @@
     z-index: 999;
 }
 
-@media only screen and (min-width: 800px) {
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 24px;
+}
+
+@media only screen and (min-width: 1169px) {
     .sidebar {
         display: none;
     }

@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import {Link} from "react-router-dom";
 import Sidebar from './Sidebar'
 import './Navbar.css'
-
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBars, faShoppingBasket} from '@fortawesome/free-solid-svg-icons'
 

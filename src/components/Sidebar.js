@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import './Sidebar.css'
-
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTimes} from '@fortawesome/free-solid-svg-icons'
 
@@ -36,6 +35,9 @@ export default function Sidebar({sidebar, closeSidebar}) {
                         <li>link 2</li>
                     </ul>
                 </nav>
+                <div className='sidebar-footer'>
+                    <span>Rapi Web</span>
+                </div>
             </div>
         </>,
         document.getElementById('portal')

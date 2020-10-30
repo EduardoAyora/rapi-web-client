@@ -1,0 +1,9 @@
+.home ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.home .home-list {
+    padding: 3em 0 0 0;
+}
