@@ -1,13 +1,16 @@
 import React, {useState} from 'react'
-import {Link} from "react-router-dom";
+import {Link} from "react-router-dom"
+import {useCategories} from '../context/CategoriesContext'
 import Sidebar from './Sidebar'
+import CategoriesNavbar from './CategoriesNavbar'
 import './Navbar.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faBars, faShoppingBasket} from '@fortawesome/free-solid-svg-icons'
-
+import {faBars, faBox, faShoppingBasket} from '@fortawesome/free-solid-svg-icons'
 
 export default function Navbar() {
     const [sidebar, setSidebar] = useState(false)
+    const categories = useCategories().categories
+
     const closeSidebar = () => setSidebar(false)
     return (
         <>
@@ -17,7 +20,7 @@ export default function Navbar() {
                         <FontAwesomeIcon icon={faBars} className='fa-lg' />
                     </button>
                     <Link to='/' className='navbar-logo'>
-                        Logo
+                        <FontAwesomeIcon icon={faBox} className='fa-2x' />
                     </Link>
                 </div>
                 <div className='navbar-nav'>
@@ -30,8 +33,8 @@ export default function Navbar() {
                     </ul>
                 </div>
             </nav>
-
-            <Sidebar sidebar={sidebar} closeSidebar={closeSidebar} />
+            <CategoriesNavbar categories={categories} />
+            <Sidebar categories={categories} sidebar={sidebar} closeSidebar={closeSidebar} />
         </>
     )
 }
