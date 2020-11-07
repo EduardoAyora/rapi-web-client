@@ -1,7 +1,7 @@
 .categories-navbar-container {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 100;
     background-color: white;
     box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.15);
     padding: 0 80px;

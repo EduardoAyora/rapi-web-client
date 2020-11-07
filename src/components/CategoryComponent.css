@@ -17,7 +17,41 @@
 }
 
 .category-component-list-container {
-    padding: 4em 2em 2em 2em;
+    padding: 4em 3em 2em 3em;
+    position: relative;
+}
+
+.category-component-list-container button {
+    color: #777A83;
+    padding: 0;
+    height: 4em;
+    width: 2em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 4em;
+    border: none;
+    background-color: #e7e7e7;
+    z-index: 2;
+}
+
+.category-component-list-container button:focus {
+    outline: none;
+}
+
+.category-component-list-container .left-button {
+    left: 0;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    justify-content: flex-start;
+}
+
+.category-component-list-container .right-button {
+    right: 0;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    justify-content: flex-end;
 }
 
 .category-component-relative-ref {
@@ -36,11 +70,3 @@
     display: inline-block;
 }
 
-.category-component button {
-    border: none;
-    padding: 1.5em;
-}
-
-.category-component button:focus {
-    outline: none;
-}
