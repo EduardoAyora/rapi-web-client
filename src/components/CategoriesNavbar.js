@@ -5,8 +5,6 @@ import './CategoriesNavbar.css'
 export default function CategoriesNavbar({categories}) {
     const [navbarOverflowed, setNavbarOverflowed] = useState(false)
     const navbarRef = useRef()
-    const outerWidth = useRef()
-    const innerWidth = useRef()
 
     const NAVBAR_LINKS_STYLE = {
         margin: navbarOverflowed ? 'auto 2em auto 0' : ''
@@ -14,18 +12,17 @@ export default function CategoriesNavbar({categories}) {
 
     // cambiando separacion de los botones categoria al desbordar
     useEffect(() => {
-        outerWidth.current = navbarRef.current.offsetWidth
-        innerWidth.current = navbarRef.current.scrollWidth
-        if(innerWidth.current > outerWidth.current) setNavbarOverflowed(true)
+        const outerWidth = navbarRef.current.offsetWidth
+        const innerWidth = navbarRef.current.scrollWidth
+        if(innerWidth > outerWidth) setNavbarOverflowed(true)
     }, [])
 
     // centrando el scroll horizontal
     useEffect(() => {
-        if(outerWidth.current != null && innerWidth.current != null) {
-            outerWidth.current = navbarRef.current.offsetWidth
-            innerWidth.current = navbarRef.current.scrollWidth
-            navbarRef.current.scrollLeft = (innerWidth.current - outerWidth.current) / 2
-        }
+        const outerWidth = navbarRef.current.offsetWidth
+        const innerWidth = navbarRef.current.scrollWidth
+        navbarRef.current.scrollLeft = (innerWidth - outerWidth) / 2
+        
     })
 
     const categoriesLinks = categories.map(categorie => {

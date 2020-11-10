@@ -1,6 +1,7 @@
 .product-component {
     display: flex;
     white-space: normal;
+    padding-right: 2.5em;
 }
 
 .product-component-image-container {
@@ -24,6 +25,11 @@
     font-size: 20px;
     margin: 0;
     max-width: 50px;
+}
+
+.product-component-ingredients {
+    font-size: 15px;
+    line-height: 21px;
 }
 
 .product-component-price {

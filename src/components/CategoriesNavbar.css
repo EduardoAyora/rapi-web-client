@@ -8,7 +8,7 @@
 }
 
 .categories-navbar {
-    height: 90px;
+    height: 75px;
     display: flex;
     overflow: auto;
 }
