@@ -20,7 +20,7 @@ export default function CategoryComponent({category}) {
     }, [containerHeight])
 
     const handleNext = () => setCurrentProduct(currentProduct => {
-        if(currentProduct > - products.length + 1) return currentProduct - 1
+        if(currentProduct > - products.length) return currentProduct - 1
         return currentProduct
     })
     const handlePrevious = () => setCurrentProduct(currentProduct => {
@@ -36,7 +36,7 @@ export default function CategoryComponent({category}) {
     // incluyendo estilo de flecha desabilitada
     const LEFT_BUTTON_STYLE = {color: ''}
     const RIGHT_BUTTON_STYLE = {color: ''}
-    if(!(currentProduct > - products.length + 1)) RIGHT_BUTTON_STYLE.color = '#777a834d'
+    if(!(currentProduct > - products.length)) RIGHT_BUTTON_STYLE.color = '#777a834d'
     if(!(currentProduct < 0)) LEFT_BUTTON_STYLE.color = '#777a834d'
 
     const productComponents = products.map(product => {
@@ -59,6 +59,11 @@ export default function CategoryComponent({category}) {
                 <div style={CONTAINER_COMPONENT_STYLE} className='category-component-relative-ref'>
                     <ul ref={innerComponentRef} className='category-component-list'  style={{left: distanceLeft}}>
                         {productComponents}
+                        <li className='category-component-view-more' style={{width: productComponentWidth - 45, height: productComponents.length === 0 ? '140px' : ''}} >
+                            <Link to={`/categorias/${category.slug}`}>
+                                Ver más
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <button onClick={handleNext} style={ARROW_STYLE} className='category-component-button right-button'>

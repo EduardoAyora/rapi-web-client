@@ -59,6 +59,11 @@
     font-weight: 700;
 }
 
+.sidebar nav a {
+    text-decoration: none;
+    color: white;
+}
+
 .overlay-styles {
     position: fixed;
     top: 0;

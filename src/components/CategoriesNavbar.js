@@ -25,10 +25,10 @@ export default function CategoriesNavbar({categories}) {
         
     })
 
-    const categoriesLinks = categories.map(categorie => {
+    const categoriesLinks = categories.map(category => {
         return (
-            <Link key={categorie._id} to={`/categorias/${categorie.slug}`} style={NAVBAR_LINKS_STYLE}>
-                {categorie.name}
+            <Link key={category._id} to={`/categorias/${category.slug}`} style={NAVBAR_LINKS_STYLE}>
+                {category.name}
             </Link>
         )
     })

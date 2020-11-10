@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import './ProductComponent.css'
 
 export default function ProductComponent({product, productComponentWidth}) {
@@ -15,9 +14,9 @@ export default function ProductComponent({product, productComponentWidth}) {
                     <img src={process.env.REACT_APP_API_URL + imageUrl} alt={name} />
                 </div>
                 <div className='product-component-info'>
-                    <Link className='product-component-name' to='/'>
+                    <span className='product-component-name'>
                         {name}
-                    </Link>
+                    </span>
                     <p className='product-component-ingredients'>
                         {ingredients}
                     </p>

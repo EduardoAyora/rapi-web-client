@@ -1,10 +1,20 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+import {Link} from 'react-router-dom'
 import './Sidebar.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTimes} from '@fortawesome/free-solid-svg-icons'
 
-export default function Sidebar({sidebar, closeSidebar}) {
+export default function Sidebar({sidebar, closeSidebar, categories}) {
+    const categoryNames = categories.map(category => {
+        return (
+            <li key={category._id}>
+                <Link to={`/categorias/${category.slug}`}>
+                    {category.name}
+                </Link>
+            </li>
+        )
+    })
 
     return ReactDom.createPortal(
         <>
@@ -17,22 +27,7 @@ export default function Sidebar({sidebar, closeSidebar}) {
                 </div>
                 <nav>
                     <ul>
-                        <li>link 1</li>
-                        <li>link 2</li>
-                        <li>link 1</li>
-                        <li>link 2</li>
-                        <li>link 1</li>
-                        <li>link 2</li>
-                        <li>link 1</li>
-                        <li>link 2</li>
-                        <li>link 1</li>
-                        <li>link 2</li>
-                        <li>link 1</li>
-                        <li>link 2</li>
-                        <li>link 1</li>
-                        <li>link 2</li>
-                        <li>link 1</li>
-                        <li>link 2</li>
+                        {categoryNames}
                     </ul>
                 </nav>
                 <div className='sidebar-footer'>
