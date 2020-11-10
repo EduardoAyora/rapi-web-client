@@ -27,10 +27,6 @@
     color: white;
 }
 
-.navbar-burguer-button:focus {
-    outline: none;
-}
-
 .navbar-nav ul {
     margin: 0;
     margin-right: 1.5em;

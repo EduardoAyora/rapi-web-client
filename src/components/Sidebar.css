@@ -41,10 +41,6 @@
     padding: 1.5em;
 }
 
-.sidebar-top button:focus {
-    outline: none;
-}
-
 .sidebar nav  {
     padding: 10px 1.5em 20px 3.5em;
     max-height: 75%;

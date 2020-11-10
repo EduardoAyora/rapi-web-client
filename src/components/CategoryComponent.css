@@ -21,7 +21,13 @@
     position: relative;
 }
 
-.category-component-list-container button {
+@media only screen and (max-width: 600px) {
+    .category-component-list-container {
+        padding: 4em 2em 2em;
+    }
+}
+
+.category-component-list-container .category-component-button {
     color: #777A83;
     padding: 0;
     height: 4em;
@@ -34,10 +40,6 @@
     border: none;
     background-color: #e7e7e7;
     z-index: 2;
-}
-
-.category-component-list-container button:focus {
-    outline: none;
 }
 
 .category-component-list-container .left-button {
@@ -57,7 +59,6 @@
 .category-component-relative-ref {
     position: relative;
     overflow: hidden;
-    height: 60px;
 }
 
 .category-component .category-component-list {

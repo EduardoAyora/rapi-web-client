@@ -12,12 +12,14 @@ export default function CategoriesNavbar({categories}) {
         margin: navbarOverflowed ? 'auto 2em auto 0' : ''
     }
 
+    // cambiando separacion de los botones categoria al desbordar
     useEffect(() => {
         outerWidth.current = navbarRef.current.offsetWidth
         innerWidth.current = navbarRef.current.scrollWidth
         if(innerWidth.current > outerWidth.current) setNavbarOverflowed(true)
     }, [])
 
+    // centrando el scroll horizontal
     useEffect(() => {
         if(outerWidth.current != null && innerWidth.current != null) {
             outerWidth.current = navbarRef.current.offsetWidth
