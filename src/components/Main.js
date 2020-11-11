@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Switch, Route} from "react-router-dom"
 import Navbar from './Navbar'
 import Home from './Home'
@@ -6,17 +6,20 @@ import CategoryView from './CategoryView'
 import './Main.css'
 
 export default function Main() {
+    const [newInCart, setNewInCart] = useState(false)
+
     return (
         <>
-            <Navbar />
+            <Navbar newInCart={newInCart} />
             <div className='main'>
                 <Switch>
-                    <Route path='/categorias/:slug' render={(props) => <CategoryView {...props} />} />
+                    <Route path='/categorias/:slug' render={(props) => 
+                        <CategoryView {...props} setNewInCart={setNewInCart} />} />
                     <Route path='/carrito'>
                         Carrito
                     </Route>
                     <Route path='/'>
-                        <Home />
+                        <Home setNewInCart={setNewInCart} />
                     </Route>
                 </Switch>
             </div>

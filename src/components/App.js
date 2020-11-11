@@ -1,12 +1,15 @@
 import {BrowserRouter as Router} from "react-router-dom";
 import Main from './Main'
 import {CategoriesProvider} from '../context/CategoriesContext'
+import {CartProvider} from '../context/CartContext'
 
 function App() {
   return (
     <Router basename={'/rapi-web'}>
       <CategoriesProvider>
-        <Main />
+        <CartProvider>
+          <Main />
+        </CartProvider>
       </CategoriesProvider>
     </Router>
   );

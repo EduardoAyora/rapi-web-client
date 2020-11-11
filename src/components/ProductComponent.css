@@ -33,6 +33,42 @@
 }
 
 .product-component-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 180px;
+    min-height: 40px;
+}
+
+.product-component-price-middle {
+    max-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.product-component-price button {
+    border: none;
+    color: #3A3D49;
+    cursor: pointer;
+    background-color: #fad040;
+    border-radius: 40px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+}
+
+.product-component-right-button {
+    right: 0;
+}
+
+.product-component-left-button {
+    left: 0;
+}
+
+.product-component-price-value {
     font-size: 20px;
     font-weight: 700;
     color: #3A3D49;
@@ -40,12 +76,48 @@
 
 .product-component-add-button {
     border: none;
-    padding: 1em 2.5em;
+    width: 175px;
+    height: 40px;
     color: #3A3D49;
     font-weight: 700;
     cursor: pointer;
     margin-top: 1em;
     border-radius: 4px;
     background-color: #fad040;
-    color: #3a3d4a;
+}
+
+.product-component-change-quantity-group {
+    height: 40px;
+}
+
+.product-component-change-quantity-group button {
+    border: none;
+    color: #3A3D49;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #fad040;
+    height: 100%;
+    width: 32px;
+}
+
+.product-component-change-quantity-group input {
+    width: 46px;
+    margin-left: 4px;
+    margin-right: 4px;
+    height: 96%;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(241, 241, 242);
+    color: #3A3D49;
+    text-align: center;
+}
+
+.product-component-change-quantity-group input::-webkit-outer-spin-button,
+.product-component-change-quantity-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.product-component-change-quantity-group input[type=number] {
+  -moz-appearance: textfield;
 }

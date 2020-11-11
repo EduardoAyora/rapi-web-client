@@ -4,7 +4,7 @@ import ProductComponent from './ProductComponent'
 import axios from 'axios'
 import './CategoryView.css'
 
-export default function CategoryView({match}) {
+export default function CategoryView({match, setNewInCart}) {
     const [loading, setLoading] = useState(true)
     const category = useCategories().categories.find(({slug}) => slug === match.params.slug)
     const setCategories = useCategories().setCategories
@@ -34,7 +34,8 @@ export default function CategoryView({match}) {
     else {
         const productComponentWidth = 340
         products = category.products.map(product => {
-            return <ProductComponent key={product._id} product={product} productComponentWidth={productComponentWidth} />
+            return <ProductComponent key={product._id} product={product} 
+                productComponentWidth={productComponentWidth} setNewInCart={setNewInCart} />
         })
     }
 

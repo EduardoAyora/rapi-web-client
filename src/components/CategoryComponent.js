@@ -5,7 +5,7 @@ import './CategoryComponent.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons'
 
-export default function CategoryComponent({category}) {
+export default function CategoryComponent({category, setNewInCart}) {
     const [currentProduct, setCurrentProduct] = useState(0)
     const [containerHeight, setContainerHeight] = useState(0)
 
@@ -41,7 +41,8 @@ export default function CategoryComponent({category}) {
 
     const productComponents = products.map(product => {
         return (
-            <ProductComponent key={product._id} product={product} productComponentWidth={productComponentWidth} />
+            <ProductComponent key={product._id} product={product} 
+                productComponentWidth={productComponentWidth} setNewInCart={setNewInCart} />
         )
     })
 
