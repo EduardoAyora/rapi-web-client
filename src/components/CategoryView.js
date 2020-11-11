@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {useCategories} from '../context/CategoriesContext'
+import ProductComponent from './ProductComponent'
 import axios from 'axios'
 import './CategoryView.css'
 
@@ -31,8 +32,9 @@ export default function CategoryView({match}) {
     let products
     if(loading) products = <span>Cargando...</span>
     else {
+        const productComponentWidth = 340
         products = category.products.map(product => {
-            return <li key={product._id}>{product.name}</li>
+            return <ProductComponent key={product._id} product={product} productComponentWidth={productComponentWidth} />
         })
     }
 
