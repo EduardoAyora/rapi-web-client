@@ -48,7 +48,7 @@ export default function CategoryComponent({category}) {
     return (
         <div className='category-component'>
             <h2 className='category-title'>
-                <Link to='/'>
+                <Link to={`/categorias/${category.slug}`}>
                     {name}
                 </Link>
             </h2>

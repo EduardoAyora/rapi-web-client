@@ -9,7 +9,7 @@ export default function Sidebar({sidebar, closeSidebar, categories}) {
     const categoryNames = categories.map(category => {
         return (
             <li key={category._id}>
-                <Link to={`/categorias/${category.slug}`}>
+                <Link to={`/categorias/${category.slug}`} onClick={closeSidebar}>
                     {category.name}
                 </Link>
             </li>

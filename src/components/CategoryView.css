@@ -1,0 +1,17 @@
+.category-view-title {
+    display: flex;
+    height: 5em;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 1px;
+}
+
+.category-view-body {
+    padding: 4em 3em;
+}
+
+.category-view-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
