@@ -65,5 +65,38 @@
     }
 }
 
+.new-in-cart-icon-container {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-in-cart-icon {
+    position: absolute;
+    border-radius: 1.2em;
+    height: 1.2em;
+    width: 1.2em;
+    background-color: rgba(247, 203, 51, 0.7);
+    animation-timing-function: linear;
+    animation-duration: .5s;
+    animation-name: added;
+}
+  
+@keyframes added {
+    50% {
+        height: 2em;
+        width: 2em;
+        background-color: rgba(247, 203, 51, 0.9);
+    }
+
+    100% {
+        height: 1.2em;
+        width: 1.2em;
+    }
+}
+
 
 

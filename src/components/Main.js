@@ -3,6 +3,7 @@ import {Switch, Route} from "react-router-dom"
 import Navbar from './Navbar'
 import Home from './Home'
 import CategoryView from './CategoryView'
+import Cart from './Cart'
 import './Main.css'
 
 export default function Main() {
@@ -16,7 +17,7 @@ export default function Main() {
                     <Route path='/categorias/:slug' render={(props) => 
                         <CategoryView {...props} setNewInCart={setNewInCart} />} />
                     <Route path='/carrito'>
-                        Carrito
+                        <Cart setNewInCart={setNewInCart} />
                     </Route>
                     <Route path='/'>
                         <Home setNewInCart={setNewInCart} />
