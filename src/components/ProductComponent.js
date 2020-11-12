@@ -75,7 +75,7 @@ export default function ProductComponent({product, productComponentWidth, setNew
         <div>
             <div className='product-component-change-quantity-group'>
                 <button onClick={buttonMinusClick}>-</button>
-                <input type="number" value={quantity} className="" onChange={inputChange} />
+                <input type="number" value={quantity} onChange={inputChange} />
                 <button onClick={buttonPlusClick}>+</button>
             </div>
             <button className="product-component-add-button" onClick={addToCartClick}>
