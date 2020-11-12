@@ -5,7 +5,7 @@ import {CartProvider} from '../context/CartContext'
 
 function App() {
   return (
-    <Router basename={'/rapi-web'}>
+    <Router basename={'/rapiweb'}>
       <CategoriesProvider>
         <CartProvider>
           <Main />

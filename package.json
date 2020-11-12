@@ -2,7 +2,7 @@
   "name": "rapi-web-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/rapi-web",
+  "homepage": "/rapiweb",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
