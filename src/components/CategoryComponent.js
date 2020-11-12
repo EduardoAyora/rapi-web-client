@@ -16,7 +16,7 @@ export default function CategoryComponent({category, setNewInCart}) {
 
     useEffect(() => {
         const innerHeigth = innerComponentRef.current.offsetHeight
-        if(innerHeigth > containerHeight) setContainerHeight(innerHeigth + 2)
+        if(innerHeigth > containerHeight) setContainerHeight(innerHeigth + 12)
     }, [containerHeight])
 
     const handleNext = () => setCurrentProduct(currentProduct => {
@@ -30,7 +30,7 @@ export default function CategoryComponent({category, setNewInCart}) {
 
     const name = category.name
     const products = category.products
-    const productComponentWidth = 340
+    const productComponentWidth = 360
     const distanceLeft = `${currentProduct * productComponentWidth}px`
 
     // incluyendo estilo de flecha desabilitada

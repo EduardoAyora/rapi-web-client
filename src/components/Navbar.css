@@ -5,6 +5,7 @@
     justify-content: space-between;
     background-color: #D1333C;
     color: white;
+    box-shadow: 0 2px 2px 0 rgba(228,230,232,.35);
 }
 
 .navbar a {

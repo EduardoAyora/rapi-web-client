@@ -32,7 +32,7 @@ export default function CategoryView({match, setNewInCart}) {
     let products
     if(loading) products = <span>Cargando...</span>
     else {
-        const productComponentWidth = 340
+        const productComponentWidth = 360
         products = category.products.map(product => {
             return <ProductComponent key={product._id} product={product} 
                 productComponentWidth={productComponentWidth} setNewInCart={setNewInCart} />
