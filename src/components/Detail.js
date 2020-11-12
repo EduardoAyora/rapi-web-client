@@ -26,16 +26,18 @@ export default function Detail({product, priceName, priceValue, quantity, detail
             <div className="detail-image">
                 <img src={process.env.REACT_APP_API_URL + product.image_url} alt={product.name} />
             </div>
-            <h4 className="detail-product-name">{product.name}</h4>
-            <div className="detail-product-price">
-                <span className="detail-price-name">{`${priceName}:`}</span>
-                <span>{`$${priceValue}`}</span>
-            </div>
-            <div className='detail-change-quantity-container'>
-                <div className="product-component-change-quantity-group">
-                    <button className="" onClick={buttonMinusClick}>-</button>
-                    <input type="number" value={quantity} disabled/>
-                    <button className="" onClick={buttonPlusClick}>+</button>
+            <div className='detail-product-info'>
+                <h4 className="detail-product-name">{product.name}</h4>
+                <div className="detail-product-price">
+                    <span className="detail-price-name">{`${priceName}:`}</span>
+                    <span>{`$${priceValue}`}</span>
+                </div>
+                <div className='detail-change-quantity-container'>
+                    <div className="product-component-change-quantity-group">
+                        <button className="" onClick={buttonMinusClick}>-</button>
+                        <input type="number" value={quantity} disabled/>
+                        <button className="" onClick={buttonPlusClick}>+</button>
+                    </div>
                 </div>
             </div>
             <div className="detail-price-total">

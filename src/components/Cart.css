@@ -11,7 +11,13 @@
     color: #414b56;
 }
 
+.cart-list-container {
+    display: flex;
+    justify-content: center;
+}
+
 .cart-list {
+    width: 290px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -25,14 +31,25 @@
     background-color: white;
     padding: 18px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 
 .purchase-button-container button {
-    width: 100%;
+    width: 290px;
     height: 50px;
     border: none;
     background-color: #D1333C;
     color: white;
     border-radius: 1px;
     font-weight: 700;
+}
+
+@media only screen and (min-width: 760px) {
+    .cart-list {
+        width: 630px;
+    }
+    .purchase-button-container button {
+        width: 630px;
+    }
 }

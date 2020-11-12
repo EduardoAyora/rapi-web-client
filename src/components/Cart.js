@@ -46,9 +46,11 @@ export default function Cart({setNewInCart}) {
         <>
             <div className='cart'>
                 <h2 className='cart-total-header'>Total: ${cartTotal.toFixed(2)}</h2>
-                <ul className='cart-list'>
-                    {details}
-                </ul>
+                <div className='cart-list-container'>
+                    <ul className='cart-list'>
+                        {details}
+                    </ul>
+                </div>
             </div>
             <div className='purchase-button-container'>
                 <button onClick={handlePurchase}>Finalizar Compra</button>
