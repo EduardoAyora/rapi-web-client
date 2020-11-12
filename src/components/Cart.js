@@ -9,7 +9,19 @@ export default function Cart({setNewInCart}) {
 
     useEffect(() => {
         setNewInCart(false)
-    }, [])
+    }, [setNewInCart])
+
+    function handlePurchase() {
+        const details = cart.map(cartElement => {
+            return {
+                quantity: cartElement.quantity,
+                priceId: cartElement.priceId,
+                productId: cartElement.product._id
+            }
+        })
+        console.log(details)
+        setCart([])
+    }
 
     let cartTotal = 0
     const details = cart.map((cartElement) => {
@@ -31,11 +43,16 @@ export default function Cart({setNewInCart}) {
     })
 
     return (
-        <div className='cart'>
-            <h2 className='cart-total-header'>Total: ${cartTotal.toFixed(2)}</h2>
-            <ul className='cart-list'>
-                {details}
-            </ul>
-        </div>
+        <>
+            <div className='cart'>
+                <h2 className='cart-total-header'>Total: ${cartTotal.toFixed(2)}</h2>
+                <ul className='cart-list'>
+                    {details}
+                </ul>
+            </div>
+            <div className='purchase-button-container'>
+                <button onClick={handlePurchase}>Finalizar Compra</button>
+            </div>
+        </>
     )
 }

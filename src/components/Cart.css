@@ -1,6 +1,5 @@
 .cart {
-    padding: 24px 18px;
-    background-color: #f8f8f8;
+    padding: 24px 18px 96px;
 }
 
 .cart-total-header {
@@ -16,4 +15,24 @@
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.purchase-button-container {
+    position: fixed;
+    z-index: 2;
+    bottom: -1px;
+    width: 100%;
+    background-color: white;
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+.purchase-button-container button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #D1333C;
+    color: white;
+    border-radius: 1px;
+    font-weight: 700;
 }
